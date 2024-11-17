@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2baa9fd1b257b4bbef4c8edfe1c024, type: 3}
+  m_Name: SlimeStats
+  m_EditorClassIdentifier: 
+  maxHealth: 300
+  damage: 15
+  attackCooldown: 0.5
+  attackRange: 1.6
+  attackColliderDistance: -0.32
+  chaseRange: 7
+  chaseColliderDistance: 0
+  chaseSpeed: 5
+  edgeCheckRange: 0.5
+  edgeCheckColliderDistance: -5.08
+  edgeCheckYOffset: 0
+  patrolSpeed: 3
+  waitTimeAfterReachCurrentPosition: 1.5
+  stuntTime: 1

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1074677290439",
+    "project_id": "trst-a5c0e",
+    "storage_bucket": "trst-a5c0e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1074677290439:android:6e715eb8422920d35475e2",
+        "android_client_info": {
+          "package_name": "com.gameuit.qhtk.theheroesjourney"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtG6O1tU_t_j3KfGhH4KLYuHtdv8KrRNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2baa9fd1b257b4bbef4c8edfe1c024, type: 3}
+  m_Name: TutorialKnightStatus
+  m_EditorClassIdentifier: 
+  maxHealth: 90
+  damage: 10
+  attackCooldown: 0.5
+  attackRange: 2
+  attackColliderDistance: 0.64
+  chaseRange: 30
+  chaseColliderDistance: 0
+  chaseSpeed: 5
+  edgeCheckRange: 1
+  edgeCheckColliderDistance: 2.47
+  edgeCheckYOffset: 0.18
+  patrolSpeed: 8
+  waitTimeAfterReachCurrentPosition: 2
+  stuntTime: 1
