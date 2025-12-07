@@ -84,7 +84,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Duck_meleeAttack
+  m_Name: MeleeAttack
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -118,7 +118,7 @@ AnimatorStateMachine:
     m_Position: {x: -10, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -162583960198499072}
-    m_Position: {x: 80, y: -120, z: 0}
+    m_Position: {x: 80, y: -130, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4384898308037339371}
     m_Position: {x: 600, y: 170, z: 0}
@@ -217,7 +217,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Duck_hurt
+  m_Name: Hurt
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -271,7 +271,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Duck_die
+  m_Name: Die
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -297,7 +297,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Duck
+  m_Name: Squirrel
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: hurt

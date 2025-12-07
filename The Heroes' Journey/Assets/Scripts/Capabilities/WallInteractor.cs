@@ -28,31 +28,42 @@ namespace TheHeroesJourney
 
         private Move move;
         private Jump jump;
+        private Player player;
+
+        public bool inputByKeyboard = false;
 
         // Start is called before the first frame update
         void Start()
         {
+            player = GetComponent<Player>();
             collisionDataRetriever = GetComponent<CollisionDataRetriever>();
             body = GetComponent<Rigidbody2D>();
             controller = GetComponent<Controller>();
             move = GetComponent<Move>();
             jump = GetComponent<Jump>();
+
+            inputByKeyboard = player.inputByKeyboard;
         }
 
         // Update is called once per frame
         void Update()
         {
-            //BAN PHIM
-            if (onWall && !onGround)
+            if(inputByKeyboard)
             {
-                desiredJump |= controller.input.RetrieveJumpInput();
+                //BAN PHIM
+                if (onWall && !onGround)
+                {
+                    desiredJump |= controller.input.RetrieveJumpInput();
+                }
             }
-
-            ////BUTTON
-            //if (onWall && !onGround)
-            //{
-            //    desiredJump = jump.desiredJump;
-            //}
+            else
+            {
+                //BUTTON
+                if (onWall && !onGround)
+                {
+                    desiredJump = jump.desiredJump;
+                }
+            }
         }
 
         private void FixedUpdate()
@@ -83,58 +94,61 @@ namespace TheHeroesJourney
                 InGameManager.Instance.player.GetComponentInChildren<Animator>().SetBool("onWall", false);
             }
 
-            //BAN PHIM
             #region Wall Jump
-            if (desiredJump)
+
+            if (inputByKeyboard)
             {
-                AudioManager.Instance.Play("PlayerJump");
-
-                if (Mathf.Abs(-wallDirectionX - controller.input.RetrieveMoveInput()) < 0.00000000001)
+                //BAN PHIM
+                if (desiredJump)
                 {
-                    InGameManager.Instance.player.GetComponentInChildren<Animator>().SetBool("onWall", false);
-                    move.Turn();
-                    velocity = new Vector2(wallJumpClimb.x * wallDirectionX, wallJumpClimb.y);
-                    isWallJumping = true;
-                    desiredJump = false;
-                }
-                else if (controller.input.RetrieveMoveInput() == 0)
-                {
+                    AudioManager.Instance.Play("PlayerJump");
 
-                    InGameManager.Instance.player.GetComponentInChildren<Animator>().SetBool("onWall", false);
-                    move.Turn();
-                    velocity = new Vector2(wallJumpBounce.x * wallDirectionX, wallJumpBounce.y);
-                    isWallJumping = true;
-                    desiredJump = false;
+                    if (Mathf.Abs(-wallDirectionX - controller.input.RetrieveMoveInput()) < 0.00000000001)
+                    {
+                        InGameManager.Instance.player.GetComponentInChildren<Animator>().SetBool("onWall", false);
+                        move.Turn();
+                        velocity = new Vector2(wallJumpClimb.x * wallDirectionX, wallJumpClimb.y);
+                        isWallJumping = true;
+                        desiredJump = false;
+                    }
+                    else if (controller.input.RetrieveMoveInput() == 0)
+                    {
+
+                        InGameManager.Instance.player.GetComponentInChildren<Animator>().SetBool("onWall", false);
+                        move.Turn();
+                        velocity = new Vector2(wallJumpBounce.x * wallDirectionX, wallJumpBounce.y);
+                        isWallJumping = true;
+                        desiredJump = false;
+                    }
                 }
             }
+            else
+            {
+                //BUTTON
+                if (desiredJump)
+                {
+                    AudioManager.Instance.Play("PlayerJump");
+
+                    if (Mathf.Abs(-wallDirectionX - move.direction.x) < 0.00000000001)
+                    {
+                        InGameManager.Instance.player.GetComponentInChildren<Animator>().SetBool("onWall", false);
+                        move.Turn();
+                        velocity = new Vector2(wallJumpClimb.x * wallDirectionX, wallJumpClimb.y);
+                        isWallJumping = true;
+                        desiredJump = false;
+                    }
+                    else if (move.direction.x == 0)
+                    {
+                        InGameManager.Instance.player.GetComponentInChildren<Animator>().SetBool("onWall", false);
+                        move.Turn();
+                        velocity = new Vector2(wallJumpBounce.x * wallDirectionX, wallJumpBounce.y);
+                        isWallJumping = true;
+                        desiredJump = false;
+                    }
+                }
+            }
+
             #endregion
-
-
-            ////BUTTON
-            //#region Wall Jump
-            //if (desiredJump)
-            //{
-            //    AudioManager.Instance.Play("PlayerJump");
-
-            //    if (Mathf.Abs(-wallDirectionX - move.direction.x) < 0.00000000001)
-            //    {
-            //        InGameManager.Instance.player.GetComponentInChildren<Animator>().SetBool("onWall", false);
-            //        move.Turn();
-            //        velocity = new Vector2(wallJumpClimb.x * wallDirectionX, wallJumpClimb.y);
-            //        isWallJumping = true;
-            //        desiredJump = false;
-            //    }
-            //    else if (move.direction.x == 0)
-            //    {
-            //        InGameManager.Instance.player.GetComponentInChildren<Animator>().SetBool("onWall", false);
-            //        move.Turn();
-            //        velocity = new Vector2(wallJumpBounce.x * wallDirectionX, wallJumpBounce.y);
-            //        isWallJumping = true;
-            //        desiredJump = false;
-            //    }
-            //}
-            //#endregion
-
 
             body.linearVelocity = velocity;
         }

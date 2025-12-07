@@ -37,6 +37,8 @@ public class Jump : MonoBehaviour
 
     private bool isJumpButtonHeldDown;
 
+    private bool inputByKeyboard = false;
+
     void Awake()
     {
         player = GetComponent<Player>();
@@ -47,6 +49,8 @@ public class Jump : MonoBehaviour
         _fallSpeedYDampingChangeThreshold = CameraManager.Instance._fallSpeedYDampingChangeThreshold;
 
         defaultGravityScale = 1f;
+
+        inputByKeyboard = player.inputByKeyboard;
     }
 
     // Update is called once per frame
@@ -55,8 +59,11 @@ public class Jump : MonoBehaviour
         if (PauseManager.isPause || (IsTigerActive() && player.isDashing) || player.isDogHealing)
             return;
 
-        //BAN PHIM
-        desiredJump |= input.RetrieveJumpInput();
+        if (inputByKeyboard)
+        {
+            //BAN PHIM
+            desiredJump |= input.RetrieveJumpInput();
+        }
 
         //if player is falling past a certain speed threshold
         if (body.linearVelocity.y < _fallSpeedYDampingChangeThreshold && !CameraManager.Instance.IsLerpingYDamping && !CameraManager.Instance.LerpedFromPlayerFalling)
@@ -110,33 +117,39 @@ public class Jump : MonoBehaviour
             JumpAction();
         }
 
-        //BAN PHIM
-        if (input.RetrieveJumpHoldInput() && body.linearVelocity.y > 0)
-        {
-            body.gravityScale = upwardMovementMultiplier;
-        }
-        else if ((!input.RetrieveJumpHoldInput() || body.linearVelocity.y < 0) && !player.isDashing)
-        {
-            body.gravityScale = downwardMovementMultiplier;
-        }
-        else if (body.linearVelocity.y == 0)
-        {
-            body.gravityScale = defaultGravityScale;
-        }
 
-        ////BUTTON
-        //if (isJumpButtonHeldDown && body.velocity.y > 0)
-        //{
-        //    body.gravityScale = upwardMovementMultiplier;
-        //}
-        //else if ((!isJumpButtonHeldDown || body.velocity.y < 0) && !player.isDashing)
-        //{
-        //    body.gravityScale = downwardMovementMultiplier;
-        //}
-        //else if (body.velocity.y == 0)
-        //{
-        //    body.gravityScale = defaultGravityScale;
-        //}
+        if (inputByKeyboard)
+        {
+            //BAN PHIM
+            if (input.RetrieveJumpHoldInput() && body.linearVelocity.y > 0)
+            {
+                body.gravityScale = upwardMovementMultiplier;
+            }
+            else if ((!input.RetrieveJumpHoldInput() || body.linearVelocity.y < 0) && !player.isDashing)
+            {
+                body.gravityScale = downwardMovementMultiplier;
+            }
+            else if (body.linearVelocity.y == 0)
+            {
+                body.gravityScale = defaultGravityScale;
+            }
+        }
+        else
+        {
+            //BUTTON
+            if (isJumpButtonHeldDown && body.linearVelocity.y > 0)
+            {
+                body.gravityScale = upwardMovementMultiplier;
+            }
+            else if ((!isJumpButtonHeldDown || body.linearVelocity.y < 0) && !player.isDashing)
+            {
+                body.gravityScale = downwardMovementMultiplier;
+            }
+            else if (body.linearVelocity.y == 0)
+            {
+                body.gravityScale = defaultGravityScale;
+            }
+        }
 
         body.linearVelocity = velocity;
     }

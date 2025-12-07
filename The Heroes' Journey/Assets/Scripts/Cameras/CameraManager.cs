@@ -202,22 +202,45 @@ namespace TheHeroesJourney
 
         public void SetCamera()
         {
-            for (int i = 0; i < _allVirtualCameras.Length; i++)
+            if(savedVirtualCameraName == null)
             {
-                if (_allVirtualCameras[i].gameObject.name == savedVirtualCameraName)
+                for (int i = 0; i < _allVirtualCameras.Length; i++)
                 {
-                    _allVirtualCameras[i].enabled = true;
+                    if (_allVirtualCameras[i].TryGetComponent(out CinemachineVirtualCamera virtualCamera)
+                        && virtualCamera.enabled)
+                    {
+                        //set the current avtive camera
+                        _currentCamera = _allVirtualCameras[i];
 
-                    //set the current avtive camera
-                    _currentCamera = _allVirtualCameras[i];
-
-                    //set the framing transposer
-                    _framingTransposer = _currentCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
+                        //set the framing transposer
+                        _framingTransposer = _currentCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
+                    }
+                    else
+                    {
+                        _allVirtualCameras[i].enabled = false;
+                    }
                 }
-                else
+            }
+            else
+            {
+                for (int i = 0; i < _allVirtualCameras.Length; i++)
                 {
-                    _allVirtualCameras[i].enabled = false;
+                    if (_allVirtualCameras[i].gameObject.name == savedVirtualCameraName)
+                    {
+                        _allVirtualCameras[i].enabled = true;
+
+                        //set the current avtive camera
+                        _currentCamera = _allVirtualCameras[i];
+
+                        //set the framing transposer
+                        _framingTransposer = _currentCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
+                    }
+                    else
+                    {
+                        _allVirtualCameras[i].enabled = false;
+                    }
                 }
+
             }
 
             //set the YDamping amount so it's based on the inspector value

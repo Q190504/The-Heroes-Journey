@@ -39,11 +39,12 @@ namespace TheHeroesJourney
         private float changeSpeed = 3;
         private bool isMoveLeftButtonHeldDown;
         private bool isMoveRightButtonHeldDown;
-
+        private bool inputByKeyboard = false;
 
         private void Awake()
         {
             player = GetComponent<Player>();
+            inputByKeyboard = player.inputByKeyboard;
 
             //BAN PHIM
             controller = GetComponent<Controller>();
@@ -70,24 +71,29 @@ namespace TheHeroesJourney
                 return;
             }
 
-            ////BAN PHIM
-            direction.x = controller.input.RetrieveMoveInput();
-
-            ////BUTTON
-            //if (isMoveLeftButtonHeldDown)
-            //{
-            //    direction.x -= Time.deltaTime * changeSpeed;
-            //    if (direction.x < -1)
-            //        direction.x = -1;
-            //}
-            //else if (isMoveRightButtonHeldDown)
-            //{
-            //    direction.x += Time.deltaTime * changeSpeed;
-            //    if (direction.x > 1)
-            //        direction.x = 1;
-            //}
-            //else
-            //    direction.x = 0;
+            if (inputByKeyboard)
+            {
+                //BAN PHIM
+                direction.x = controller.input.RetrieveMoveInput();
+            }
+            else
+            {
+                //BUTTON
+                if (isMoveLeftButtonHeldDown)
+                {
+                    direction.x -= Time.deltaTime * changeSpeed;
+                    if (direction.x < -1)
+                        direction.x = -1;
+                }
+                else if (isMoveRightButtonHeldDown)
+                {
+                    direction.x += Time.deltaTime * changeSpeed;
+                    if (direction.x > 1)
+                        direction.x = 1;
+                }
+                else
+                    direction.x = 0;
+            }
 
             desiredVelocity = new Vector3(direction.x, 0f, 0f) * Mathf.Max(maxSpeed - collisionDataRetriever.Friction, 0f);
             player.GetComponentInChildren<Animator>().SetFloat("xVelocity", Mathf.Abs(desiredVelocity.x));
@@ -109,53 +115,58 @@ namespace TheHeroesJourney
             maxSpeedChange = acceleration * Time.deltaTime;
             velocity.x = Mathf.MoveTowards(velocity.x, desiredVelocity.x, maxSpeedChange);
 
-            //BAN PHIM
             #region Wall Stick
-            if (collisionDataRetriever.OnWall && !collisionDataRetriever.OnGround && !wallInteractor.isWallJumping)
-            {
-                if (wallStickCounter > 0)
-                {
-                    velocity.x = 0;
 
-                    if (controller.input.RetrieveMoveInput() == collisionDataRetriever.ContactNormal.x)
+            if (inputByKeyboard)
+            {
+                //BAN PHIM
+                if (collisionDataRetriever.OnWall && !collisionDataRetriever.OnGround && !wallInteractor.isWallJumping)
+                {
+                    if (wallStickCounter > 0)
                     {
-                        wallStickCounter -= Time.deltaTime;
+                        velocity.x = 0;
+
+                        if (controller.input.RetrieveMoveInput() == collisionDataRetriever.ContactNormal.x)
+                        {
+                            wallStickCounter -= Time.deltaTime;
+                        }
+                        else
+                        {
+                            wallStickCounter = wallStickTime;
+                        }
                     }
                     else
                     {
                         wallStickCounter = wallStickTime;
                     }
                 }
-                else
+            }
+            else
+            {
+                //BUTTON
+                if (collisionDataRetriever.OnWall && !collisionDataRetriever.OnGround && !wallInteractor.isWallJumping)
                 {
-                    wallStickCounter = wallStickTime;
+                    if (wallStickCounter > 0)
+                    {
+                        velocity.x = 0;
+
+                        if (direction.x == collisionDataRetriever.ContactNormal.x)
+                        {
+                            wallStickCounter -= Time.deltaTime;
+                        }
+                        else
+                        {
+                            wallStickCounter = wallStickTime;
+                        }
+                    }
+                    else
+                    {
+                        wallStickCounter = wallStickTime;
+                    }
                 }
             }
+
             #endregion
-
-            ////BUTTON
-            //#region Wall Stick
-            //if (collisionDataRetriever.OnWall && !collisionDataRetriever.OnGround && !wallInteractor.isWallJumping)
-            //{
-            //    if (wallStickCounter > 0)
-            //    {
-            //        velocity.x = 0;
-
-            //        if (direction.x == collisionDataRetriever.ContactNormal.x)
-            //        {
-            //            wallStickCounter -= Time.deltaTime;
-            //        }
-            //        else
-            //        {
-            //            wallStickCounter = wallStickTime;
-            //        }
-            //    }
-            //    else
-            //    {
-            //        wallStickCounter = wallStickTime;
-            //    }
-            //}
-            //#endregion
 
             body.linearVelocity = velocity;
 

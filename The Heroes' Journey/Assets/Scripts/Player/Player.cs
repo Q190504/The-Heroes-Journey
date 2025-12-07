@@ -9,6 +9,7 @@ namespace TheHeroesJourney
 {
     public class Player : BaseCharacter, IDataPresistence
     {
+        [Header("Character Settings")]
         //Nhân vật index đang được bật
         public int _currentCharacterIndex;
         private BaseMainCharacter currentCharacter => myCharacters[_currentCharacterIndex];
@@ -17,8 +18,13 @@ namespace TheHeroesJourney
         public UnityAction<int> _onChangeCharacter;
 
         public BaseCharacterConfig playerConfig;
+
+        [Header("Control Settings")]
+        public bool inputByKeyboard = true;
+
         public float respawnTime = 1f;
 
+        [HideInInspector]
         public bool desiredAttack = false;
         public MeleeAttackConfig basicAttackConfig;
         protected float attackCooldownTimer;
@@ -32,6 +38,7 @@ namespace TheHeroesJourney
         public UnityAction<float, float> _onChangeHealth;
         public UnityAction _playerDie;
 
+        [HideInInspector]
         public bool isDashing;
         public UnityAction<bool> _onDogHealing;
         public float dogImmobilizationTime;
@@ -77,11 +84,14 @@ namespace TheHeroesJourney
         // Update is called once per frame
         void Update()
         {
-            //BAN PHIM
-            if (Input.GetKeyDown(KeyCode.B))
-                ClickActiveSkill();
-            if (Input.GetKeyDown(KeyCode.C))
-                ClickBasicAttack();
+            if(inputByKeyboard)
+            {
+                //BAN PHIM
+                if (Input.GetKeyDown(KeyCode.X))
+                    ClickActiveSkill();
+                if (Input.GetKeyDown(KeyCode.C))
+                    ClickBasicAttack();
+            }
 
             StartCoroutine(Attack());
             StartBasicAttackCooldown();
@@ -205,7 +215,7 @@ namespace TheHeroesJourney
         /// <summary>
         /// Click Button swap skill và UI
         /// </summary>
-        public void ClickSwapToSquirrel()
+        public void ClickSwapToDuck()
         {
             this._currentCharacterIndex = 0;
             for (int i = 0; i < myCharacters.Count; i++)
