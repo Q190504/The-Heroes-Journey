@@ -45,8 +45,8 @@ namespace TheHeroesJourney
         {
             player = GetComponent<Player>();
 
-            ////BAN PHIM
-            //controller = GetComponent<Controller>();
+            //BAN PHIM
+            controller = GetComponent<Controller>();
 
             collisionDataRetriever = GetComponent<CollisionDataRetriever>();
             body = GetComponent<Rigidbody2D>();
@@ -66,28 +66,28 @@ namespace TheHeroesJourney
         {
             if (PauseManager.isPause || player.isDogHealing)
             {
-                body.velocity = new Vector2(0, body.velocity.y);
+                body.linearVelocity = new Vector2(0, body.linearVelocity.y);
                 return;
             }
 
             ////BAN PHIM
-            //direction.x = controller.input.RetrieveMoveInput();
+            direction.x = controller.input.RetrieveMoveInput();
 
-            //BUTTON
-            if (isMoveLeftButtonHeldDown)
-            {
-                direction.x -= Time.deltaTime * changeSpeed;
-                if (direction.x < -1)
-                    direction.x = -1;
-            }
-            else if (isMoveRightButtonHeldDown)
-            {
-                direction.x += Time.deltaTime * changeSpeed;
-                if (direction.x > 1)
-                    direction.x = 1;
-            }
-            else
-                direction.x = 0;
+            ////BUTTON
+            //if (isMoveLeftButtonHeldDown)
+            //{
+            //    direction.x -= Time.deltaTime * changeSpeed;
+            //    if (direction.x < -1)
+            //        direction.x = -1;
+            //}
+            //else if (isMoveRightButtonHeldDown)
+            //{
+            //    direction.x += Time.deltaTime * changeSpeed;
+            //    if (direction.x > 1)
+            //        direction.x = 1;
+            //}
+            //else
+            //    direction.x = 0;
 
             desiredVelocity = new Vector3(direction.x, 0f, 0f) * Mathf.Max(maxSpeed - collisionDataRetriever.Friction, 0f);
             player.GetComponentInChildren<Animator>().SetFloat("xVelocity", Mathf.Abs(desiredVelocity.x));
@@ -97,43 +97,19 @@ namespace TheHeroesJourney
         {
             if (player.isDogHealing)
             {
-                body.velocity = new Vector2(0, body.velocity.y);
+                body.linearVelocity = new Vector2(0, body.linearVelocity.y);
                 return;
             }
 
             onGround = collisionDataRetriever.OnGround;
-            velocity = body.velocity;
+            velocity = body.linearVelocity;
 
 
             acceleration = onGround ? maxAcceleration : maxAirAcceleration;
             maxSpeedChange = acceleration * Time.deltaTime;
             velocity.x = Mathf.MoveTowards(velocity.x, desiredVelocity.x, maxSpeedChange);
 
-            ////BAN PHIM
-            //#region Wall Stick
-            //if (collisionDataRetriever.OnWall && !collisionDataRetriever.OnGround && !wallInteractor.isWallJumping)
-            //{
-            //    if (wallStickCounter > 0)
-            //    {
-            //        velocity.x = 0;
-
-            //        if (controller.input.RetrieveMoveInput() == collisionDataRetriever.ContactNormal.x)
-            //        {
-            //            wallStickCounter -= Time.deltaTime;
-            //        }
-            //        else
-            //        {
-            //            wallStickCounter = wallStickTime;
-            //        }
-            //    }
-            //    else
-            //    {
-            //        wallStickCounter = wallStickTime;
-            //    }
-            //}
-            //#endregion
-
-            //BUTTON
+            //BAN PHIM
             #region Wall Stick
             if (collisionDataRetriever.OnWall && !collisionDataRetriever.OnGround && !wallInteractor.isWallJumping)
             {
@@ -141,7 +117,7 @@ namespace TheHeroesJourney
                 {
                     velocity.x = 0;
 
-                    if (direction.x == collisionDataRetriever.ContactNormal.x)
+                    if (controller.input.RetrieveMoveInput() == collisionDataRetriever.ContactNormal.x)
                     {
                         wallStickCounter -= Time.deltaTime;
                     }
@@ -157,7 +133,31 @@ namespace TheHeroesJourney
             }
             #endregion
 
-            body.velocity = velocity;
+            ////BUTTON
+            //#region Wall Stick
+            //if (collisionDataRetriever.OnWall && !collisionDataRetriever.OnGround && !wallInteractor.isWallJumping)
+            //{
+            //    if (wallStickCounter > 0)
+            //    {
+            //        velocity.x = 0;
+
+            //        if (direction.x == collisionDataRetriever.ContactNormal.x)
+            //        {
+            //            wallStickCounter -= Time.deltaTime;
+            //        }
+            //        else
+            //        {
+            //            wallStickCounter = wallStickTime;
+            //        }
+            //    }
+            //    else
+            //    {
+            //        wallStickCounter = wallStickTime;
+            //    }
+            //}
+            //#endregion
+
+            body.linearVelocity = velocity;
 
             if (direction.x > 0 || direction.x < 0)
                 TurnCheck();

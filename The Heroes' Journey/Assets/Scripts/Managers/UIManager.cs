@@ -309,7 +309,7 @@ namespace TheHeroesJourney
             foundBookPanel.SetActive(false);
         }
 
-        public void OpenDuckProfilePanel()
+        public void OpenSquirrelProfilePanel()
         {
             AudioManager.Instance.Play("Click");
             characterProfileList[0].SetActive(true);
@@ -341,7 +341,7 @@ namespace TheHeroesJourney
 
             characterProfileList[5].SetActive(true);
         }
-        public void CloseDuckProfilePanel()
+        public void CloseSquirrelProfilePanel()
         {
             AudioManager.Instance.Play("ShortClick");
 

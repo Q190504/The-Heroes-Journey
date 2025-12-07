@@ -30,10 +30,10 @@ namespace TheHeroesJourney
             if (InGameManager.Instance.isGameFinished)
                 DestroySkill();
 
-            anim.SetFloat("yVelocity", rb.velocity.y);
+            anim.SetFloat("yVelocity", rb.linearVelocity.y);
 
             if (isBreaking)
-                rb.velocity = Vector3.zero;
+                rb.linearVelocity = Vector3.zero;
         }
 
         public void SetGravity(float gravity)

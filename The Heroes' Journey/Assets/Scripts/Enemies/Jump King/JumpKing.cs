@@ -58,8 +58,8 @@ namespace TheHeroesJourney
                 return;
             onGround = IsGrounded();
 
-            anim.SetFloat("yVelocity", rb.velocity.y);
-            anim.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
+            anim.SetFloat("yVelocity", rb.linearVelocity.y);
+            anim.SetFloat("xVelocity", Math.Abs(rb.linearVelocity.x));
 
             attackCooldownTimer -= Time.deltaTime;
 
@@ -68,7 +68,7 @@ namespace TheHeroesJourney
                 FaceTarget(playerPos);
 
                 Vector2 directionToPlayer = ((Vector2)playerPos.position - (Vector2)transform.position).normalized;
-                rb.velocity = new Vector2(directionToPlayer.x * enemyConfig.chaseSpeed, 0);
+                rb.linearVelocity = new Vector2(directionToPlayer.x * enemyConfig.chaseSpeed, 0);
 
                 if (Vector2.Distance(playerPos.position, rb.position) <= enemyConfig.attackRange)
                 {
@@ -95,13 +95,13 @@ namespace TheHeroesJourney
             {
                 case JumpKingSkills.WindBullet:
                     anim.SetTrigger("attack");
-                    rb.velocity = new Vector2(0, 0);
+                    rb.linearVelocity = new Vector2(0, 0);
 
                     shootWindBulletSkill.WindBullet();
                     break;
                 case JumpKingSkills.WindExplotion:
                     anim.SetTrigger("attack");
-                    rb.velocity = new Vector2(0, 0);
+                    rb.linearVelocity = new Vector2(0, 0);
 
                     createWindExplotion.WindExplotion();
                     break;
@@ -157,7 +157,7 @@ namespace TheHeroesJourney
         {
             currentSpeed = 0;
             isDying = true;
-            rb.velocity = Vector3.zero;
+            rb.linearVelocity = Vector3.zero;
             AudioManager.Instance.Play("JumpKingSmack");
             AudioManager.Instance.Play("JumpKingDie");
             anim.SetTrigger("die");

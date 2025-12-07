@@ -42,22 +42,22 @@ namespace TheHeroesJourney
         // Update is called once per frame
         void Update()
         {
-            ////BAN PHIM
-            //if (onWall && !onGround)
-            //{
-            //    desiredJump |= controller.input.RetrieveJumpInput();
-            //}
-
-            //BUTTON
+            //BAN PHIM
             if (onWall && !onGround)
             {
-                desiredJump = jump.desiredJump;
+                desiredJump |= controller.input.RetrieveJumpInput();
             }
+
+            ////BUTTON
+            //if (onWall && !onGround)
+            //{
+            //    desiredJump = jump.desiredJump;
+            //}
         }
 
         private void FixedUpdate()
         {
-            velocity = body.velocity;
+            velocity = body.linearVelocity;
             onWall = collisionDataRetriever.OnWall;
             onGround = collisionDataRetriever.OnGround;
             wallDirectionX = collisionDataRetriever.ContactNormal.x;
@@ -83,40 +83,13 @@ namespace TheHeroesJourney
                 InGameManager.Instance.player.GetComponentInChildren<Animator>().SetBool("onWall", false);
             }
 
-            ////BAN PHIM
-            //#region Wall Jump
-            //if (desiredJump)
-            //{
-            //    AudioManager.Instance.Play("PlayerJump");
-
-            //    if (Mathf.Abs(-wallDirectionX - controller.input.RetrieveMoveInput()) < 0.00000000001)
-            //    {
-            //        InGameManager.Instance.player.GetComponentInChildren<Animator>().SetBool("onWall", false);
-            //        move.Turn();
-            //        velocity = new Vector2(wallJumpClimb.x * wallDirectionX, wallJumpClimb.y);
-            //        isWallJumping = true;
-            //        desiredJump = false;
-            //    }
-            //    else if (controller.input.RetrieveMoveInput() == 0)
-            //    {
-
-            //        InGameManager.Instance.player.GetComponentInChildren<Animator>().SetBool("onWall", false);
-            //        move.Turn();
-            //        velocity = new Vector2(wallJumpBounce.x * wallDirectionX, wallJumpBounce.y);
-            //        isWallJumping = true;
-            //        desiredJump = false;
-            //    }
-            //}
-            //#endregion
-
-
-            //BUTTON
+            //BAN PHIM
             #region Wall Jump
             if (desiredJump)
             {
                 AudioManager.Instance.Play("PlayerJump");
 
-                if (Mathf.Abs(-wallDirectionX - move.direction.x) < 0.00000000001)
+                if (Mathf.Abs(-wallDirectionX - controller.input.RetrieveMoveInput()) < 0.00000000001)
                 {
                     InGameManager.Instance.player.GetComponentInChildren<Animator>().SetBool("onWall", false);
                     move.Turn();
@@ -124,8 +97,9 @@ namespace TheHeroesJourney
                     isWallJumping = true;
                     desiredJump = false;
                 }
-                else if (move.direction.x == 0)
+                else if (controller.input.RetrieveMoveInput() == 0)
                 {
+
                     InGameManager.Instance.player.GetComponentInChildren<Animator>().SetBool("onWall", false);
                     move.Turn();
                     velocity = new Vector2(wallJumpBounce.x * wallDirectionX, wallJumpBounce.y);
@@ -136,7 +110,33 @@ namespace TheHeroesJourney
             #endregion
 
 
-            body.velocity = velocity;
+            ////BUTTON
+            //#region Wall Jump
+            //if (desiredJump)
+            //{
+            //    AudioManager.Instance.Play("PlayerJump");
+
+            //    if (Mathf.Abs(-wallDirectionX - move.direction.x) < 0.00000000001)
+            //    {
+            //        InGameManager.Instance.player.GetComponentInChildren<Animator>().SetBool("onWall", false);
+            //        move.Turn();
+            //        velocity = new Vector2(wallJumpClimb.x * wallDirectionX, wallJumpClimb.y);
+            //        isWallJumping = true;
+            //        desiredJump = false;
+            //    }
+            //    else if (move.direction.x == 0)
+            //    {
+            //        InGameManager.Instance.player.GetComponentInChildren<Animator>().SetBool("onWall", false);
+            //        move.Turn();
+            //        velocity = new Vector2(wallJumpBounce.x * wallDirectionX, wallJumpBounce.y);
+            //        isWallJumping = true;
+            //        desiredJump = false;
+            //    }
+            //}
+            //#endregion
+
+
+            body.linearVelocity = velocity;
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
@@ -145,7 +145,7 @@ namespace TheHeroesJourney
 
             if (collisionDataRetriever.OnWall && !collisionDataRetriever.OnGround && isWallJumping)
             {
-                body.velocity = Vector2.zero;
+                body.linearVelocity = Vector2.zero;
             }
         }
     }

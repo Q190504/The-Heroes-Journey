@@ -44,7 +44,7 @@ namespace TheHeroesJourney
             if (isDying)
             {
                 currentSpeed = 0;
-                rb.velocity = new Vector2(0, 0);
+                rb.linearVelocity = new Vector2(0, 0);
             }
             else
             {
@@ -59,7 +59,7 @@ namespace TheHeroesJourney
                             isAttacking = true;
 
                             currentSpeed = 0;
-                            rb.velocity = new Vector2(0, 0);
+                            rb.linearVelocity = new Vector2(0, 0);
 
                             Attack();
                         }
@@ -89,7 +89,7 @@ namespace TheHeroesJourney
         public override void Attack()
         {
             anim.SetTrigger("attack");
-            rb.velocity = new Vector2(0, 0);
+            rb.linearVelocity = new Vector2(0, 0);
             AudioManager.Instance.Play("CultistPriestAttack");
             currentSpeed = 0;
 

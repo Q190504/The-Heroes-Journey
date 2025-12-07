@@ -171,7 +171,7 @@ namespace TheHeroesJourney
         {
             this.currentCharacter.ActiveSkill();
 
-            //Khong phai Duck && penguin
+            //Khong phai Squirrel && penguin
             if (this._currentCharacterIndex != 0 && this._currentCharacterIndex != 2)
                 StartSkillCooldown();
         }
@@ -205,7 +205,7 @@ namespace TheHeroesJourney
         /// <summary>
         /// Click Button swap skill và UI
         /// </summary>
-        public void ClickSwapToDuck()
+        public void ClickSwapToSquirrel()
         {
             this._currentCharacterIndex = 0;
             for (int i = 0; i < myCharacters.Count; i++)
@@ -335,7 +335,7 @@ namespace TheHeroesJourney
 
         IEnumerator Respawn(float duration)
         {
-            body.velocity = Vector3.zero;
+            body.linearVelocity = Vector3.zero;
             yield return new WaitForSeconds(duration);
             transform.position = InGameManager.Instance.respawnPos;
             PlusHealth(playerConfig.maxHealth);

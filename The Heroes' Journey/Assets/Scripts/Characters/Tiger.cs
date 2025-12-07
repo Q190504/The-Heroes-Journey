@@ -47,11 +47,11 @@ namespace TheHeroesJourney
 
             for (float dashTimer = tigerDashConfig.dashingTime; dashTimer > 0; dashTimer -= Time.deltaTime)
             {
-                _host.body.velocity = new Vector3(direction * tigerDashConfig.dashingPower, 0, 0);
+                _host.body.linearVelocity = new Vector3(direction * tigerDashConfig.dashingPower, 0, 0);
                 yield return null;
             }
 
-            _host.body.velocity = Vector3.zero;
+            _host.body.linearVelocity = Vector3.zero;
             trailRenderer.emitting = false;
             _host.body.gravityScale = defaultGravityScale;
             _host.isDashing = false;

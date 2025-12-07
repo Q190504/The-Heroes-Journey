@@ -87,7 +87,7 @@ namespace TheHeroesJourney
 
         private void SlowTarget()
         {
-            target.gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            target.gameObject.GetComponent<Rigidbody2D>().linearVelocity = Vector3.zero;
         }
 
         IEnumerator Create()

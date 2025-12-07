@@ -46,7 +46,7 @@ namespace TheHeroesJourney
                 _earthBump = earthBump;
                 _fallingRock = fallingRock;
                 jumpKing.isJumping = true;
-                rb.velocity = new Vector2(0, 0);
+                rb.linearVelocity = new Vector2(0, 0);
                 anim.SetBool("isJumping", true);
                 Invoke(nameof(Jump), delayJumpTime);
             }
@@ -54,7 +54,7 @@ namespace TheHeroesJourney
 
         void Jump()
         {
-            rb.velocity = new Vector2(0, Mathf.Sqrt(jumpKingJumpSkillConfig.jumpForce * 10 * Mathf.Abs(Physics2D.gravity.y)));
+            rb.linearVelocity = new Vector2(0, Mathf.Sqrt(jumpKingJumpSkillConfig.jumpForce * 10 * Mathf.Abs(Physics2D.gravity.y)));
 
             StartCoroutine(Move());
         }
@@ -62,7 +62,7 @@ namespace TheHeroesJourney
         IEnumerator Move()
         {
             yield return new WaitForSeconds(1);
-            rb.velocity = new Vector2(0, 0);
+            rb.linearVelocity = new Vector2(0, 0);
 
             int direction = 1;
             if (!jumpKing.canJumpLeft)
@@ -82,7 +82,7 @@ namespace TheHeroesJourney
                 transform.position = new Vector3(jumpKing.player.transform.position.x + direction * jumpKingJumpSkillConfig.horizontalDistanceFallingRock, currentY, 0);
 
 
-            rb.velocity = new Vector2(0, -Mathf.Sqrt(jumpKingJumpSkillConfig.jumpForce * 20 * Mathf.Abs(Physics2D.gravity.y)));
+            rb.linearVelocity = new Vector2(0, -Mathf.Sqrt(jumpKingJumpSkillConfig.jumpForce * 20 * Mathf.Abs(Physics2D.gravity.y)));
         }
 
         private void OnCollisionEnter2D(Collision2D collision)

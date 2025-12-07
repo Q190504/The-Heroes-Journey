@@ -55,15 +55,15 @@ public class Jump : MonoBehaviour
         if (PauseManager.isPause || (IsTigerActive() && player.isDashing) || player.isDogHealing)
             return;
 
-        ////BAN PHIM
-        //desiredJump |= input.RetrieveJumpInput();
+        //BAN PHIM
+        desiredJump |= input.RetrieveJumpInput();
 
         //if player is falling past a certain speed threshold
-        if (body.velocity.y < _fallSpeedYDampingChangeThreshold && !CameraManager.Instance.IsLerpingYDamping && !CameraManager.Instance.LerpedFromPlayerFalling)
+        if (body.linearVelocity.y < _fallSpeedYDampingChangeThreshold && !CameraManager.Instance.IsLerpingYDamping && !CameraManager.Instance.LerpedFromPlayerFalling)
             CameraManager.Instance.LerpYDamping(true);
 
         //if player is stading still or moving up
-        if (body.velocity.y >= 0f && !CameraManager.Instance.IsLerpingYDamping && CameraManager.Instance.LerpedFromPlayerFalling)
+        if (body.linearVelocity.y >= 0f && !CameraManager.Instance.IsLerpingYDamping && CameraManager.Instance.LerpedFromPlayerFalling)
         {
             //reset so it can be called again
             CameraManager.Instance.LerpedFromPlayerFalling = false;
@@ -76,11 +76,11 @@ public class Jump : MonoBehaviour
     private void FixedUpdate()
     {
         onGround = ground.OnGround;
-        velocity = body.velocity;
+        velocity = body.linearVelocity;
 
         player.GetComponentInChildren<Animator>().SetFloat("yVelocity", velocity.y);
 
-        if (onGround && body.velocity.y == 0)
+        if (onGround && body.linearVelocity.y == 0)
         {
             if (isJumping)
                 AudioManager.Instance.Play("PlayerLand");
@@ -110,12 +110,26 @@ public class Jump : MonoBehaviour
             JumpAction();
         }
 
-        ////BAN PHIM
-        //if (input.RetrieveJumpHoldInput() && body.velocity.y > 0)
+        //BAN PHIM
+        if (input.RetrieveJumpHoldInput() && body.linearVelocity.y > 0)
+        {
+            body.gravityScale = upwardMovementMultiplier;
+        }
+        else if ((!input.RetrieveJumpHoldInput() || body.linearVelocity.y < 0) && !player.isDashing)
+        {
+            body.gravityScale = downwardMovementMultiplier;
+        }
+        else if (body.linearVelocity.y == 0)
+        {
+            body.gravityScale = defaultGravityScale;
+        }
+
+        ////BUTTON
+        //if (isJumpButtonHeldDown && body.velocity.y > 0)
         //{
         //    body.gravityScale = upwardMovementMultiplier;
         //}
-        //else if ((!input.RetrieveJumpHoldInput() || body.velocity.y < 0) && !player.isDashing)
+        //else if ((!isJumpButtonHeldDown || body.velocity.y < 0) && !player.isDashing)
         //{
         //    body.gravityScale = downwardMovementMultiplier;
         //}
@@ -124,21 +138,7 @@ public class Jump : MonoBehaviour
         //    body.gravityScale = defaultGravityScale;
         //}
 
-        //BUTTON
-        if (isJumpButtonHeldDown && body.velocity.y > 0)
-        {
-            body.gravityScale = upwardMovementMultiplier;
-        }
-        else if ((!isJumpButtonHeldDown || body.velocity.y < 0) && !player.isDashing)
-        {
-            body.gravityScale = downwardMovementMultiplier;
-        }
-        else if (body.velocity.y == 0)
-        {
-            body.gravityScale = defaultGravityScale;
-        }
-
-        body.velocity = velocity;
+        body.linearVelocity = velocity;
     }
 
     private void JumpAction()

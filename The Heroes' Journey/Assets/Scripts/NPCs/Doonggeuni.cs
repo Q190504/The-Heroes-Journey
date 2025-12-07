@@ -31,7 +31,7 @@ namespace TheHeroesJourney
             else
             {
                 anim.SetBool("isMoving", false);
-                rb.velocity = new Vector2(0, 0);
+                rb.linearVelocity = new Vector2(0, 0);
                 FaceTarget(InGameManager.Instance.player.transform);
             }
         }

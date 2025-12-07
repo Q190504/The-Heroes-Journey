@@ -60,14 +60,14 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: BattleCultisPriestTheme
-    clip: {fileID: 8300000, guid: 35d2456c90a9d154ab538e3a7f81478a, type: 3}
+    clip: {fileID: 8300000, guid: 3f4f63e8ec4c98e4abf70e7f5a04409e, type: 3}
     audioMixerGroup: {fileID: 5258104042515733911, guid: 1d633fee72802f3468b2808601769570, type: 2}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: BattleJumpKingTheme
-    clip: {fileID: 8300000, guid: 863377ccf8fe4614a83dc388ee6b50ac, type: 3}
+    clip: {fileID: 8300000, guid: 30c2dd96a736f414fbc35cbbd22c7c7b, type: 3}
     audioMixerGroup: {fileID: 5258104042515733911, guid: 1d633fee72802f3468b2808601769570, type: 2}
     volume: 1
     pitch: 1

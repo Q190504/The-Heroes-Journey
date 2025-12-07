@@ -26,7 +26,7 @@ namespace TheHeroesJourney
             anim.SetFloat("currentSpeed", currentSpeed);
 
             if (isDying)
-                rb.velocity = Vector2.zero;
+                rb.linearVelocity = Vector2.zero;
             else if (!isTakingDamage)
             {
                 if (PlayerInAttackRange())
@@ -35,7 +35,7 @@ namespace TheHeroesJourney
                     {
                         FaceTarget(playerPos);
                         isAttacking = true;
-                        rb.velocity = new Vector2(0, 0);
+                        rb.linearVelocity = new Vector2(0, 0);
                         currentSpeed = 0;
 
                         anim.SetTrigger("attack");
