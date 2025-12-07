@@ -14,7 +14,8 @@ namespace TheHeroesJourney
         public static InGameManager Instance { get; private set; }
 
         public Player player;
-
+        
+        [SerializeField] private bool spawnAtStartPos = false;
         public GameObject startPos;
         public int currentCheckPointID;
         public Vector2 currentCheckPointPos;
@@ -77,7 +78,7 @@ namespace TheHeroesJourney
 
             isBattleCultisPriest = false;
 
-            if (player.gameObject.transform.position == Vector3.zero)
+            if (spawnAtStartPos)
             {
                 respawnPos = startPos.transform.position;
                 player.gameObject.transform.position = startPos.transform.position;
