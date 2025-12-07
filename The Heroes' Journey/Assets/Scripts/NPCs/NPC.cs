@@ -86,7 +86,7 @@ namespace TheHeroesJourney
             if (collision != null && collision.CompareTag("Player"))
             {
                 if (talkPopupEmote != null)
-                    talkPopupEmote.SetActive(true);
+                    talkPopupEmote.SetActive(false);
 
                 if (this.gameObject.CompareTag("Kitsune"))
                 {
