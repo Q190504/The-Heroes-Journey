@@ -215,7 +215,7 @@ namespace TheHeroesJourney
         /// <summary>
         /// Click Button swap skill và UI
         /// </summary>
-        public void ClickSwapToDuck()
+        public void ClickSwapToSquirrel()
         {
             this._currentCharacterIndex = 0;
             for (int i = 0; i < myCharacters.Count; i++)
