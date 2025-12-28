@@ -55,6 +55,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -92,7 +95,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!95 &465121481412087903
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -106,6 +109,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -113,7 +117,7 @@ Animator:
   m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &6508668152098137141
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -124,8 +128,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -146,6 +150,7 @@ BoxCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 99554039762553773}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -169,7 +174,8 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,7 +186,6 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
   m_Size: {x: 9, y: 6}
   m_EdgeRadius: 0
 --- !u!114 &6144441241740894710
@@ -214,7 +219,7 @@ MonoBehaviour:
       line: 'Strangers! Guards, guards! We have intruders! '
       typingDelay: -0.01
     - character:
-        name: Keriang
+        name: Kyle
         icon: {fileID: 0}
       line: No no!!! We're here to take down the evil king who's causing chaos in
         the kingdom!
@@ -235,7 +240,7 @@ MonoBehaviour:
       line: Always slamming and banging. It's quite annoying.
       typingDelay: 0.02
     - character:
-        name: Urihyeok
+        name: Finn
         icon: {fileID: 0}
       line: (Whispering to the group) Perhaps we've found an ally in an unexpected
         place.
@@ -252,12 +257,12 @@ MonoBehaviour:
       line: Find the four legendary objects, and I'll open the way to his chamber.
       typingDelay: 0.01
     - character:
-        name: Goombayusi
+        name: Gavin
         icon: {fileID: 0}
       line: We appreciate your help.
       typingDelay: 0.02
     - character:
-        name: Goombayusi
+        name: Gavin
         icon: {fileID: 0}
       line: By the way, have you seen a dog? They kidnapped him!
       typingDelay: 0
