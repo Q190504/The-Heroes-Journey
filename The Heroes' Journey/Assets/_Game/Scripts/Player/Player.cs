@@ -56,6 +56,17 @@ namespace TheHeroesJourney
             move = GetComponent<Move>();
         }
 
+        private void OnEnable()
+        {
+            InGameManager.Instance._onSaveGame += PlusHealth;
+        }
+
+        private void OnDisable()
+        {
+            InGameManager.Instance._onSaveGame -= PlusHealth;
+
+        }
+
         // Start is called before the first frame update
         void Start()
         {
@@ -65,8 +76,6 @@ namespace TheHeroesJourney
             {
                 myCharacters[i].SetPlayerHost(this);
             }
-
-            InGameManager.Instance._onSaveGame += PlusHealth;
 
             for (int i = 0; i < myCharacters.Count; i++)
             {

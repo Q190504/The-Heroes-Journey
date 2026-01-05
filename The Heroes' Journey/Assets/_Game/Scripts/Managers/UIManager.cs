@@ -108,16 +108,6 @@ namespace TheHeroesJourney
         // Start is called before the first frame update
         void Start()
         {
-            PauseManager.Instance.onChangePause += TogglePauseMenu;
-            InGameManager.Instance.player._onChangeHealth += UpdateHealhStatus;
-            InGameManager.Instance.player._onChangeCharacter += UpdateSkillButton;
-            InGameManager.Instance.player._onCooldownSkill += UpdateCooldownSkillButton;
-            InGameManager.Instance.player._onChangeCharacter += UpdateSwitchCharacterButtons;
-            InGameManager.Instance.player._onChangeCharacter += UpdateBenchCharacters;
-            InGameManager.Instance._onPolarBearFound += OnChangePolarBearFound;
-            InGameManager.Instance._onSaveGame += ChangeCheckPointSprite;
-            InGameManager.Instance.player._onDogHealing += ToggleSwitchCharaterButtons;
-
             UpdateSwitchCharacterButtons(InGameManager.Instance.player._currentCharacterIndex);
             UpdateBenchCharacters(InGameManager.Instance.player._currentCharacterIndex);
 
@@ -142,6 +132,32 @@ namespace TheHeroesJourney
 
             optionPanel.SetActive(true);
             optionPanel.SetActive(false);
+        }
+
+        private void OnEnable()
+        {
+            PauseManager.Instance.onChangePause += TogglePauseMenu;
+            InGameManager.Instance.player._onChangeHealth += UpdateHealhStatus;
+            InGameManager.Instance.player._onChangeCharacter += UpdateSkillButton;
+            InGameManager.Instance.player._onCooldownSkill += UpdateCooldownSkillButton;
+            InGameManager.Instance.player._onChangeCharacter += UpdateSwitchCharacterButtons;
+            InGameManager.Instance.player._onChangeCharacter += UpdateBenchCharacters;
+            InGameManager.Instance._onPolarBearFound += OnChangePolarBearFound;
+            InGameManager.Instance._onSaveGame += ChangeCheckPointSprite;
+            InGameManager.Instance.player._onDogHealing += ToggleSwitchCharaterButtons;
+        }
+
+        private void OnDisable()
+        {
+            PauseManager.Instance.onChangePause -= TogglePauseMenu;
+            InGameManager.Instance.player._onChangeHealth -= UpdateHealhStatus;
+            InGameManager.Instance.player._onChangeCharacter -= UpdateSkillButton;
+            InGameManager.Instance.player._onCooldownSkill -= UpdateCooldownSkillButton;
+            InGameManager.Instance.player._onChangeCharacter -= UpdateSwitchCharacterButtons;
+            InGameManager.Instance.player._onChangeCharacter -= UpdateBenchCharacters;
+            InGameManager.Instance._onPolarBearFound -= OnChangePolarBearFound;
+            InGameManager.Instance._onSaveGame -= ChangeCheckPointSprite;
+            InGameManager.Instance.player._onDogHealing -= ToggleSwitchCharaterButtons;
         }
 
         // Update is called once per frame
