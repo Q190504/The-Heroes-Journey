@@ -10,10 +10,8 @@ namespace TheHeroesJourney
     public class Player : BaseCharacter, IDataPresistence
     {
         [Header("Character Settings")]
-        //Nhân vật index đang được bật
         public int _currentCharacterIndex;
         private BaseMainCharacter currentCharacter => myCharacters[_currentCharacterIndex];
-        //Tổng các nhân vật nó có
         public List<BaseMainCharacter> myCharacters;
         public UnityAction<int> _onChangeCharacter;
 
@@ -70,8 +68,6 @@ namespace TheHeroesJourney
         // Start is called before the first frame update
         void Start()
         {
-            //Em có thể nhận vào list prefab skill và instatiate, add vào mySkills cho tính năng user có thể chọn các tướng mang vào game
-            //Chuẩn bị gắn host
             for (int i = 0; i < myCharacters.Count; i++)
             {
                 myCharacters[i].SetPlayerHost(this);
@@ -190,7 +186,7 @@ namespace TheHeroesJourney
         {
             this.currentCharacter.ActiveSkill();
 
-            //Khong phai Squirrel && penguin
+            //Not Squirrel && penguin
             if (this._currentCharacterIndex != 0 && this._currentCharacterIndex != 2)
                 StartSkillCooldown();
         }
@@ -229,7 +225,6 @@ namespace TheHeroesJourney
             this._currentCharacterIndex = 0;
             for (int i = 0; i < myCharacters.Count; i++)
             {
-                //bật tắt skill và UI phùy hợp với index đang chọn
                 myCharacters[i].gameObject.SetActive(i == _currentCharacterIndex);
             }
             UIManager.Instance.ShowSkillButton();
@@ -241,7 +236,6 @@ namespace TheHeroesJourney
             this._currentCharacterIndex = 1;
             for (int i = 0; i < myCharacters.Count; i++)
             {
-                //bật tắt skill và UI phùy hợp với index đang chọn
                 myCharacters[i].gameObject.SetActive(i == _currentCharacterIndex);
             }
             UIManager.Instance.ShowSkillButton();
@@ -253,7 +247,6 @@ namespace TheHeroesJourney
             this._currentCharacterIndex = 2;
             for (int i = 0; i < myCharacters.Count; i++)
             {
-                //bật tắt skill và UI phùy hợp với index đang chọn
                 myCharacters[i].gameObject.SetActive(i == _currentCharacterIndex);
             }
             UIManager.Instance.HideSkillButton();
@@ -265,7 +258,6 @@ namespace TheHeroesJourney
             this._currentCharacterIndex = 3;
             for (int i = 0; i < myCharacters.Count; i++)
             {
-                //bật tắt skill và UI phùy hợp với index đang chọn
                 myCharacters[i].gameObject.SetActive(i == _currentCharacterIndex);
             }
             UIManager.Instance.ShowSkillButton();
@@ -278,7 +270,6 @@ namespace TheHeroesJourney
             this._currentCharacterIndex = 4;
             for (int i = 0; i < myCharacters.Count; i++)
             {
-                //bật tắt skill và UI phù hợp với index đang chọn
                 myCharacters[i].gameObject.SetActive(i == _currentCharacterIndex);
             }
             UIManager.Instance.ShowSkillButton();

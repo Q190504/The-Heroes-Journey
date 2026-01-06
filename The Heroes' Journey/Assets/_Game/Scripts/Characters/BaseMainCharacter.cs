@@ -8,9 +8,6 @@ namespace TheHeroesJourney
 {
     public class BaseMainCharacter : MonoBehaviour
     {
-        /// <summary>
-        /// Để skill gọi ngược về cái vỏ player -> hồi máu, tăng speed...
-        /// </summary>
         protected Player _host;
         public SkillCooldownConfig skillCooldownConfig;
 
