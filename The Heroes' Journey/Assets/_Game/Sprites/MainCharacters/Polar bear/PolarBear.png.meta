@@ -1,0 +1,1020 @@
+fileFormatVersion: 2
+guid: 0e04ac045ed02da4d8f5b8125e84715e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PolarBear_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96.85715
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc59ace83be182844b449172306a9d2b
+      internalID: 432319469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96.85715
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d883bfacd387574480c5e96c034a769
+      internalID: 549321871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96.85715
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3183f528aa0b40d46b68bc00c9a1fdc1
+      internalID: -596300065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96.85715
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be5122b784b20a46a0a00554d11982b
+      internalID: -1487439130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96.85715
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 921d90e534651e241ad77786a7ec98c6
+      internalID: -594707831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96.85715
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aac427a8bb2517a4da4001b0e5a5c4ab
+      internalID: 1817888278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96.85715
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de26b1e56e8fdc1479a7e9d1da3c443f
+      internalID: 1347497353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96.85715
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b24136a91302e2f478529c19b3373990
+      internalID: 1049847094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80.85715
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ca5a2d291e42c48a3fb19af4353969
+      internalID: -71784555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80.85715
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2169a640ee6c35f46b4323c91107a82c
+      internalID: -357055861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 80.85715
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b5758896a14e8249b616108d5f80c61
+      internalID: -28971109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 80.85715
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 308cd1807e49b064bbc10c6ddc64ea95
+      internalID: -1968191758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_12
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 80.85715
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26db8c37240565349998e20d6df5097b
+      internalID: -1583558501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64.85715
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9774f197213fb1d4f88eb129f496c261
+      internalID: 1136428091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_14
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64.85715
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17aa0f52dab189e44b10bdd36afbdc87
+      internalID: 1634483762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_15
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64.85715
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acdce40b9e99cf7429a4b3f81264d780
+      internalID: -1642907336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_16
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64.85715
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f9a2084d37f1ed4c9c3d199ed3ee438
+      internalID: 450855265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64.85715
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048a8ca0397135d4ea3e15e780326f90
+      internalID: -1889452467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_18
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64.85715
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 694736a8d1d20b349abd68d29a3c86e5
+      internalID: 747937951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64.85715
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57b359c14b273314ebe7b1c26b8f659d
+      internalID: -1771743739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_20
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64.85715
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 464a7d553d55c9d42bf8ad738635d63d
+      internalID: 1426753533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32.857143
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d36caa11a3ff1245b4696d7df72966b
+      internalID: 416629842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_22
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32.857143
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 596d6840213214d47a3a9ce6fdd6b6a2
+      internalID: -1061736225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_23
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32.857143
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1758660dc03204041b711cedbb67860b
+      internalID: -2135297945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_24
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32.857143
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51a5c3d7969b7f149a5833e29185042c
+      internalID: -367225372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_25
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32.857143
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a80126bd8e9584184c4afc218132ed
+      internalID: -2064732290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_26
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32.857143
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 192faf1c9f6701e4d96539e86eb25da7
+      internalID: 1011157459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_27
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32.857143
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2057331d94518bc4cba1f1c9e8e00830
+      internalID: -979365247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_28
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32.857143
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c972a60a7cadb4c45804539ad7a1f9f9
+      internalID: -1174004897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16.857143
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fa3af6eb4ac62a4e89f91e6b3513d82
+      internalID: 1541025539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_30
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16.857143
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc741850255c0c46b5633cedab1c896
+      internalID: 1947895477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_31
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0.8571434
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c02bf7f59e64edf4a9fccc145cca11a7
+      internalID: 396163242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_32
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0.8571434
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3277075be931f3c4db3eac048d0bc119
+      internalID: 695905024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_33
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0.8571434
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e45ffd4a8234c9419d08aba416f43c1
+      internalID: -1308481614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_34
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0.8571434
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be55441230e702947a8ff4d73b205713
+      internalID: -259566804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_35
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0.8571434
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3464d6151f8cb1341b1b54cd09b951b4
+      internalID: -1768420621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolarBear_36
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0.8571434
+        width: 32
+        height: 16.142857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ec4a3219a6765249aee8416ab04c9a5
+      internalID: -1645282953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PolarBear_0: 432319469
+      PolarBear_1: 549321871
+      PolarBear_10: -28971109
+      PolarBear_11: -1968191758
+      PolarBear_12: -1583558501
+      PolarBear_13: 1136428091
+      PolarBear_14: 1634483762
+      PolarBear_15: -1642907336
+      PolarBear_16: 450855265
+      PolarBear_17: -1889452467
+      PolarBear_18: 747937951
+      PolarBear_19: -1771743739
+      PolarBear_2: -596300065
+      PolarBear_20: 1426753533
+      PolarBear_21: 416629842
+      PolarBear_22: -1061736225
+      PolarBear_23: -2135297945
+      PolarBear_24: -367225372
+      PolarBear_25: -2064732290
+      PolarBear_26: 1011157459
+      PolarBear_27: -979365247
+      PolarBear_28: -1174004897
+      PolarBear_29: 1541025539
+      PolarBear_3: -1487439130
+      PolarBear_30: 1947895477
+      PolarBear_31: 396163242
+      PolarBear_32: 695905024
+      PolarBear_33: -1308481614
+      PolarBear_34: -259566804
+      PolarBear_35: -1768420621
+      PolarBear_36: -1645282953
+      PolarBear_4: -594707831
+      PolarBear_5: 1817888278
+      PolarBear_6: 1347497353
+      PolarBear_7: 1049847094
+      PolarBear_8: -71784555
+      PolarBear_9: -357055861
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

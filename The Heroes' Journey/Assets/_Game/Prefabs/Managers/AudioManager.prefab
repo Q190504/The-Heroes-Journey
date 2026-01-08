@@ -1,0 +1,453 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &491155963107263697
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4437588261048183042}
+  - component: {fileID: 1627155496285825794}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4437588261048183042
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491155963107263697}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -422.1406, y: -7.930794, z: 0.5193991}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1627155496285825794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491155963107263697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9db932c35556f4843bcbe8e3269ca344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: MainMenuTheme
+    clip: {fileID: 8300000, guid: e04818e3cc3177a4c946e92f4a7782c4, type: 3}
+    audioMixerGroup: {fileID: 5258104042515733911, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: MainGameTheme
+    clip: {fileID: 8300000, guid: 225d8b7886cd37140b4ea833471338a7, type: 3}
+    audioMixerGroup: {fileID: 5258104042515733911, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: BattleCultisPriestTheme
+    clip: {fileID: 8300000, guid: 3f4f63e8ec4c98e4abf70e7f5a04409e, type: 3}
+    audioMixerGroup: {fileID: 5258104042515733911, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: BattleJumpKingTheme
+    clip: {fileID: 8300000, guid: 30c2dd96a736f414fbc35cbbd22c7c7b, type: 3}
+    audioMixerGroup: {fileID: 5258104042515733911, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: CreditTheme
+    clip: {fileID: 8300000, guid: 6808cbcbeeec2b44a8c4129e660e26f1, type: 3}
+    audioMixerGroup: {fileID: 5258104042515733911, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Click
+    clip: {fileID: 8300000, guid: f2c649d1510054040886203f17667bbf, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ShortClick
+    clip: {fileID: 8300000, guid: b587efd9701e9034386ab1bc32111aba, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayButton
+    clip: {fileID: 8300000, guid: d30b632b40c254a4f9de3cc527ad1856, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pause
+    clip: {fileID: 8300000, guid: 73a0cb84ecda9884bb8f0fe23c95ca70, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Unpause
+    clip: {fileID: 8300000, guid: 998969ec9fb5b08468ebe4b8bef74876, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BackToMainMenuButton
+    clip: {fileID: 8300000, guid: 68fae031eb032a34f9d9c44e0f7670a6, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ErrorPanel
+    clip: {fileID: 8300000, guid: c3dd2266403b3a94cbf9a6ecb3fef139, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CrowCheer
+    clip: {fileID: 8300000, guid: c56970c96a357474c8f3eac085a5d5b3, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CollectItem
+    clip: {fileID: 8300000, guid: 6fecaba2d9ed74942a2aaa739ad71449, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SaveGameEffect
+    clip: {fileID: 8300000, guid: 44c9d7a8cae621d4db5255b950843f0c, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: TigerDash
+    clip: {fileID: 8300000, guid: bb1f1fa60c7cbaa4aaca38369ede482d, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PenguinThrow
+    clip: {fileID: 8300000, guid: 6d9c7183ad0aae64b91b68c1e9c9b231, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CatShoot
+    clip: {fileID: 8300000, guid: ad51598f66205844d985171989f94445, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: DogHeal
+    clip: {fileID: 8300000, guid: e683559a3955014419cff2ff90be95df, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerBasicAttack
+    clip: {fileID: 8300000, guid: b3270cb26ab3b994fa5fb5ae2515c2e5, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerHurt
+    clip: {fileID: 8300000, guid: a63bc1ebb54ee59428a1b56ad90809d0, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerJump
+    clip: {fileID: 8300000, guid: c5d8aaa06dc8aac4cbd2a7fd98e9077b, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerLand
+    clip: {fileID: 8300000, guid: 29ae48af5161bf349ba37e2513757d95, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerDie
+    clip: {fileID: 8300000, guid: 580a748cc3bfa764db132429603362ec, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: RockFalling
+    clip: {fileID: 8300000, guid: 9838ee8c82ea0704baf67a70d89a63e7, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: RockBreak
+    clip: {fileID: 8300000, guid: 3756a49e8b4a1e449ac8172877381d6c, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EarthBumpCreate
+    clip: {fileID: 8300000, guid: 7a5c7085c391dcc40a98d33eee9f9f7a, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EarthBumpDissappear
+    clip: {fileID: 8300000, guid: 0254bc13636d68941bd6e1c5a4c9f0cc, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ThunderBirdBullet
+    clip: {fileID: 8300000, guid: 3c30fd34f1c037e4fb71f05174a07a74, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: ThunderstrikePrepare
+    clip: {fileID: 8300000, guid: a60fa61ca03ed7b47bb4eec94069551c, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ThunderstrikeImpact
+    clip: {fileID: 8300000, guid: e1ffbcf3060583741b6c487b9aa8eece, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: TreeRootAppear
+    clip: {fileID: 8300000, guid: 50940422b088c5b4298500b8243df20b, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: TreeRootDisappear
+    clip: {fileID: 8300000, guid: d7a27b6e81f1b4c49aef20c679bb9b37, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: WindBulletFly
+    clip: {fileID: 8300000, guid: 1f0ddb2175403184c94141ec90c4038d, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: WindBulletHit
+    clip: {fileID: 8300000, guid: 3078bff797fe2854a8ed456c1680a068, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: WindExplotion
+    clip: {fileID: 8300000, guid: 77a7e8927c47ba145a22cffc9df16d3a, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: JumpKingLand
+    clip: {fileID: 8300000, guid: 89fb700d5fcd55a40830e3887e0997f0, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: JumpKingSmack
+    clip: {fileID: 8300000, guid: 1a2805dfcdcc8f04eba5790917ab3e7f, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: JumpKingDie
+    clip: {fileID: 8300000, guid: 292077667ba0f504e882e4d2b34d24a5, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: JumpKingHurt
+    clip: {fileID: 8300000, guid: 4aba3aee70c041f468325e6932d1b96e, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CultistPriestHurt
+    clip: {fileID: 8300000, guid: 4aba3aee70c041f468325e6932d1b96e, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CultistPriestAttack
+    clip: {fileID: 8300000, guid: bc0efb11be51bd346995fb17885d8895, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CultistPriestDie
+    clip: {fileID: 8300000, guid: 30806ce2a0b16884da1b28eeabfb450a, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: KnightAttack
+    clip: {fileID: 8300000, guid: b1b69fb5aca714a4d8cd263f1bb21b1a, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: KnightHurt
+    clip: {fileID: 8300000, guid: b1b69fb5aca714a4d8cd263f1bb21b1a, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: KnightDie1
+    clip: {fileID: 8300000, guid: 4f1d79476632ec24ca55f83a6b5021d2, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: KnightDie2
+    clip: {fileID: 8300000, guid: 19e306099eaa5ad418d1fc98095defbe, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: KnightDie3
+    clip: {fileID: 8300000, guid: 44696bfaa992596469fa5d95de80a092, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SlimeAttack
+    clip: {fileID: 8300000, guid: 71735adde2868344da6b828d7aabf5a9, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SlimeHurt
+    clip: {fileID: 8300000, guid: d51dc9cdf3b62ef4ca563bc192067c72, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SlimeDie
+    clip: {fileID: 8300000, guid: b752e95e77f11844abdec89358aa32b1, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: KingPigAttack
+    clip: {fileID: 8300000, guid: 9ddbd282063282446be8594f51bd613d, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: KingPigHurt
+    clip: {fileID: 8300000, guid: 1f892b69d09cb7a4591b7bd2779e56ea, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: KingPigDie
+    clip: {fileID: 8300000, guid: 490125a26d3274f4eadcc4e40ebc7612, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CannieAttack
+    clip: {fileID: 8300000, guid: e67774a7484a8f042a41ff27e98c2bd7, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CannieHurt
+    clip: {fileID: 8300000, guid: d76f2026bd1683c46bc7788a0461ca85, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CannieDie
+    clip: {fileID: 8300000, guid: e636f16351575b246bc787102fc4f9d0, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MimicGateOpen
+    clip: {fileID: 8300000, guid: 49173c9ca3c8f2c41a5233e6d02c8bde, type: 3}
+    audioMixerGroup: {fileID: -7128948792800172417, guid: 1d633fee72802f3468b2808601769570, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
