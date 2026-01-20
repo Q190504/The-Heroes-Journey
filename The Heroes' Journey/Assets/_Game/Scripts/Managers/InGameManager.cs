@@ -186,7 +186,10 @@ namespace TheHeroesJourney
         {
             //Player's info
             if (data.playerPosition == Vector2.zero)
+            {
                 player.gameObject.transform.position = startPos.transform.position;
+                respawnPos = player.gameObject.transform.position = startPos.transform.position;
+            }
              else
                 player.gameObject.transform.position = data.playerPosition;
 
