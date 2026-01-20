@@ -185,7 +185,11 @@ namespace TheHeroesJourney
         public void LoadData(GameData data)
         {
             //Player's info
-            player.gameObject.transform.position = data.playerPosition;
+            if (data.playerPosition == Vector2.zero)
+                player.gameObject.transform.position = startPos.transform.position;
+             else
+                player.gameObject.transform.position = data.playerPosition;
+
             respawnPos = data.respawnPosition;
 
 

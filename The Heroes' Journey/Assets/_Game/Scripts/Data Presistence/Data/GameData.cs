@@ -59,8 +59,8 @@ namespace TheHeroesJourney
         public GameData()
         {
             //Player's Info
-            playerPosition = Vector3.zero;
-            respawnPosition = Vector3.zero;
+            playerPosition = Vector2.zero;
+            respawnPosition = Vector2.zero;
             currentCharacterIndex = 0;
             playerLight = false;
             isCameraBoundaryChanged = false;
